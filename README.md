@@ -3,7 +3,7 @@ from its mathematical  foundations.
 
 Packages used: 
 - matplotlib (tracking accuracy and cost, visually representing the training images for debugging)
-- numpy (linear algebra)
+- NumPy (linear algebra)
 
 Features:
 - Choice between quadratic and cross entropy cost functions
