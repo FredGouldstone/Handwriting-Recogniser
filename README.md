@@ -11,6 +11,7 @@ Features:
 - No-improvement-in-n-epochs strategy to minimise training time
 - Choice between an improved weight initialistion for reduced likelihood of neuron saturation and the original strategy
 - Detailed tracking of cost and accuracy (can see unregularised cost, regularisation cost and total cost as well as training and testing cost)
+
 The inclusions of these features (in second commit) have improved accuracy from around 95% to 98%.
 
 I was really proud of making and improving this project. I have become more comfortable working my way through vector calculus and improved my debugging techniques. 
