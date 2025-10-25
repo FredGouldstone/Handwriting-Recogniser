@@ -2,22 +2,24 @@ A supervised, convolutional neural network to recognise images from the MNIST da
 from its mathematical  foundations.
 
 Packages used: 
-- matplotlib (tracking accuracy and cost, visually representing the training images for debugging)
-- NumPy (linear algebra)
+- matplotlib - for a tracking accuracy and cost, and for visually representing training images during debugging
+- NumPy - for linear algebra operations
 
 Features:
 - Choice between quadratic and cross entropy cost functions
-- L2 regularisation (can be turned off with REGULARISATION_PARAMETER = 0)
-- No-improvement-in-n-epochs strategy to minimise training time
-- Choice between an improved weight initialistion for reduced likelihood of neuron saturation and the original strategy
-- Detailed tracking of cost and accuracy (can see unregularised cost, regularisation cost and total cost as well as training and testing cost)
+- L2 regularisation to reduce dependency on a few neurons (can be turned off with REGULARISATION_PARAMETER = 0)
+- Early stopping strategy to reduce overfitting and minimise training time
+- Choice between an improved weight initialisation (reducing the likelihood of neuron saturation) and the original strategy
+- Detailed tracking of cost and accuracy, including unregularised cost, regularisation cost, total cost, and both training and testing accuracy.
 
-The inclusions of these features (in second commit) have improved accuracy from around 95% to 98%.
+The inclusion of these features (in the second commit) have improved accuracy from around 95% to 98%.
 
-I was really proud of making and improving this project. I have become more comfortable working my way through vector calculus and improved my debugging techniques. 
-I'm also enjoying the sense of comfortability I have with NumPy - I have really noticed the performance it is capable of when dealing with linear algebra in python!
-I really enjoyed making the underlying maths and notation 'click', and then seeing it all integrate into my program. Each iteration of adding a new feature, 
-fixing bugs, adjusting hyperparameters and seeing the improvements in results was immensely rewarding, and fueled me to add 'just one more' change to eak out performance. 
+This project was part of my personal exploration of deep learning fundamentals, focusing on understanding neural networks without relying on high-level frameworks.
+
+I was really proud of making and improving this project. I have noticed my strength in vector calculus improve, and I've grown in familiarity with NumPy  - I have really noticed the performance it is capable of when dealing with linear algebra in Python! I have been delighted by the instances where the underlying maths and notation 'clicks', and when that understanding translates into working code. Each iteration of adding a new feature, fixing bugs, adjusting hyperparameters and seeing the improvements in results was immensely rewarding, and fueled me to add 'just one more' change to eke out performance. 
+
+My biggest takeaway from this project is the realisation of how big a problem overfitting can be. For example, each time I added a new feature or adjusted a hyperparameter
+I questioned whether the improvement would generalise to real-world data. Even with techniques such as cross validation, regularisation, validation datasets and early stopping, overfitting is near impossible to eliminate completely. One particular realisation was that tuning hyperparameters may just overfit the data to the validation set. Changing the architecture and re-tuning could then overfit data to the test set, and so on. I would love to explore this concept and potential solutions in the future! More generally, this taught me to critically evaluate models and results. An increase in validation or test accuracy doesn't necessarily correlate to an improvement in real-world results - you must always test the model for robustness and ensure a more complex model is delivering better results. 
 
 Contact info:
 fg550@bath.ac.uk
